@@ -11,9 +11,7 @@ var (
 
 func init() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
-	JWTKey = *flag.String("key", "test", "jwt key")
-
+	flag.StringVar(&JWTKey, "key", "testkey", "jwt key")
 	flag.Parse()
-
 	log.Printf("jwt key: %s \n", JWTKey)
 }
